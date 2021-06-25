@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "C30C",
+    "position": [
+        -0.5277789831161499,
+        -1.5685622692108154,
+        0.43204644322395325
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.3154361248016357,
+        1.1187328396999874e-08,
+        -0.3245736062526703
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

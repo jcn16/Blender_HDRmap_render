@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "P22R",
+    "position": [
+        -0.7118145823478699,
+        0.9531866908073425,
+        1.1701668500900269
+    ],
+    "projection": "perspective",
+    "rotation": [
+        0.7936500906944275,
+        6.126047935595125e-08,
+        -2.500159740447998
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

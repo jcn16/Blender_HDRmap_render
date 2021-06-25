@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "C30D",
+    "position": [
+        0.48793941736221313,
+        -1.580791711807251,
+        0.44242459535598755
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.309485673904419,
+        1.3856250369315148e-08,
+        0.2993897795677185
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

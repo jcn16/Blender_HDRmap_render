@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "C27A",
+    "position": [
+        0.5410013794898987,
+        1.597520351409912,
+        0.15220671892166138
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.4807974100112915,
+        -5.665689783995731e-08,
+        2.8150641918182373
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

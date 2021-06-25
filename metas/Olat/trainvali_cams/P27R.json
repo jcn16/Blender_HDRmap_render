@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "P27R",
+    "position": [
+        1.0881283283233643,
+        0.7122724056243896,
+        -1.0707321166992188
+    ],
+    "projection": "perspective",
+    "rotation": [
+        2.2595901489257812,
+        -1.850091706501189e-07,
+        2.150388240814209
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "P28L",
+    "position": [
+        -0.9771410226821899,
+        0.6343463659286499,
+        -1.2335684299468994
+    ],
+    "projection": "perspective",
+    "rotation": [
+        2.3847787380218506,
+        1.001809337708437e-07,
+        -2.146599292755127
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

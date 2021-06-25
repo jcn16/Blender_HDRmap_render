@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "P16C",
+    "position": [
+        1.6082072257995605,
+        0.1610361635684967,
+        0.5296120047569275
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.2541427612304688,
+        1.5420994259329746e-08,
+        1.6705975532531738
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "P14L",
+    "position": [
+        1.6037554740905762,
+        -0.521183967590332,
+        -0.07803262025117874
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.6170371770858765,
+        -1.1080311423938838e-07,
+        1.2565850019454956
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

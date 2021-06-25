@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "C05",
+    "position": [
+        -1.6132166385650635,
+        -0.1493849754333496,
+        -0.5112558007240295
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.8764728307724,
+        1.73119516944098e-07,
+        -1.4784590005874634
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "C17",
+    "position": [
+        1.1310139894485474,
+        1.2139866352081299,
+        -0.39816632866859436
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.8063169717788696,
+        7.879913255237625e-08,
+        2.3915624618530273
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

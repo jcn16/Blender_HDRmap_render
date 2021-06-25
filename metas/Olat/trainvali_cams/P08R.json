@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "P08R",
+    "position": [
+        -0.7078906893730164,
+        -1.5437564849853516,
+        0.0852452889084816
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.5206445455551147,
+        2.3936298276794332e-08,
+        -0.42994195222854614
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "P04C",
+    "position": [
+        -1.5297712087631226,
+        0.13188277184963226,
+        -0.6227183938026428
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.9560883045196533,
+        1.719849649362004e-07,
+        -1.656794548034668
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

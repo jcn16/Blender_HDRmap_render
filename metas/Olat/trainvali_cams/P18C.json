@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "P18C",
+    "position": [
+        0.9203866124153137,
+        1.277032494544983,
+        -0.5362146496772766
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.899107575416565,
+        -5.215612830511418e-08,
+        2.5170936584472656
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

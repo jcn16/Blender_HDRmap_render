@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "P11L",
+    "position": [
+        0.6995845437049866,
+        -1.536619782447815,
+        -0.10539199411869049
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.6331374645233154,
+        -1.6589023488222665e-08,
+        0.42723187804222107
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

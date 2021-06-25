@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "P02R",
+    "position": [
+        -1.4734385013580322,
+        0.8309328556060791,
+        0.07668669521808624
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.5254932641983032,
+        1.0026401042750877e-08,
+        -2.084279775619507
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

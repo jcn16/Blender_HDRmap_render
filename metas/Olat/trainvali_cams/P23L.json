@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "P23L",
+    "position": [
+        -1.2781461477279663,
+        -0.4153605103492737,
+        1.03572416305542
+    ],
+    "projection": "perspective",
+    "rotation": [
+        0.914202868938446,
+        -1.9551454499833198e-07,
+        -1.2565906047821045
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "P25R",
+    "position": [
+        0.6879259347915649,
+        0.9587110877037048,
+        1.1769558191299438
+    ],
+    "projection": "perspective",
+    "rotation": [
+        0.7866840958595276,
+        1.2751530675814138e-07,
+        2.5191829204559326
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

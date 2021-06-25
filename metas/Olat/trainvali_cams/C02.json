@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 26,
+    "name": "C02",
+    "position": [
+        -1.104921579360962,
+        1.241046667098999,
+        -0.4194261133670807
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.818048357963562,
+        1.5261315766679218e-08,
+        -2.4141547679901123
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

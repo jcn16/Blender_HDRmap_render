@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "C26B",
+    "position": [
+        0.33065512776374817,
+        -1.608405351638794,
+        -0.46202075481414795
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.8450747728347778,
+        3.41180523832918e-08,
+        0.2027546763420105
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "C14",
+    "position": [
+        1.61793053150177,
+        -0.1842152327299118,
+        -0.4893084764480591
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.8626998662948608,
+        7.326918449734876e-08,
+        1.4574259519577026
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

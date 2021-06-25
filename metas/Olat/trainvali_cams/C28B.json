@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "C28B",
+    "position": [
+        -1.647491455078125,
+        0.3656825125217438,
+        0.11817988008260727
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.5008817911148071,
+        -7.937776302924249e-08,
+        -1.789218544960022
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

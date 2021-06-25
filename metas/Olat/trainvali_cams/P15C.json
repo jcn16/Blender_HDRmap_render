@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "P15C",
+    "position": [
+        1.5324504375457764,
+        0.14173828065395355,
+        -0.6093027591705322
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.9477723836898804,
+        -5.594685603682592e-08,
+        1.663025140762329
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

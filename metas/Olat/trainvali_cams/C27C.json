@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "C27C",
+    "position": [
+        1.3601148128509521,
+        -1.004531741142273,
+        0.16160574555397034
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.4755096435546875,
+        2.070044402557869e-08,
+        0.9346546530723572
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 22.63,
+    "name": "P01",
+    "position": [
+        0,
+        -1.4,
+        0
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.57,
+        0,
+        0
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

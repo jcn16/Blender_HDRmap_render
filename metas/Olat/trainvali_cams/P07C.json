@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "P07C",
+    "position": [
+        -1.1484586000442505,
+        -1.0055997371673584,
+        -0.627166211605072
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.96062433719635,
+        2.109169088271301e-07,
+        -0.8516221046447754
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

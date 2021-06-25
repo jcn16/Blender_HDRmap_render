@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "P17L",
+    "position": [
+        1.4707316160202026,
+        0.8294954299926758,
+        -0.099587082862854
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.6297069787979126,
+        7.061821349907405e-08,
+        2.0843257904052734
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

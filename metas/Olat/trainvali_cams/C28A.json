@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "C28A",
+    "position": [
+        -0.5058590173721313,
+        1.604690670967102,
+        0.1493629366159439
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.4822556972503662,
+        1.2782265912392177e-07,
+        -2.8362157344818115
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

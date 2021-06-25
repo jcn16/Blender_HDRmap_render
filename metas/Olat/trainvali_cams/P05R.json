@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "P05R",
+    "position": [
+        -1.6058971881866455,
+        -0.524992823600769,
+        0.10211353003978729
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.5104308128356934,
+        7.949462599299295e-08,
+        -1.2548328638076782
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "C08",
+    "position": [
+        -0.9649336338043213,
+        -1.2888284921646118,
+        -0.5360406637191772
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.8921927213668823,
+        -1.1757031614934021e-07,
+        -0.6426625847816467
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

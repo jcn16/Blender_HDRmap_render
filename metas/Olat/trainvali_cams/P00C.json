@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "P00C",
+    "position": [
+        -0.649800181388855,
+        1.4676693677902222,
+        0.5212345719337463
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.2567998170852661,
+        1.112721292884089e-08,
+        -2.724790096282959
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

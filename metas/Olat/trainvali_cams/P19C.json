@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "P19C",
+    "position": [
+        0.6453765034675598,
+        1.4740417003631592,
+        0.5396841168403625
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.2471978664398193,
+        -2.549677802221595e-08,
+        2.7289071083068848
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "C26A",
+    "position": [
+        -0.2063697874546051,
+        -1.6665395498275757,
+        0.1681600958108902
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.4709901809692383,
+        8.606067858352162e-09,
+        -0.12320411950349808
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

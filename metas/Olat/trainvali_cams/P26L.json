@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 18,
+    "name": "P26L",
+    "position": [
+        -0.9053400158882141,
+        -0.7293758392333984,
+        -1.2272990942001343
+    ],
+    "projection": "perspective",
+    "rotation": [
+        2.3832616806030273,
+        -2.494077833148367e-08,
+        -0.892627477645874
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}
