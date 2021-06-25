@@ -1,6 +1,7 @@
 import os,sys
 import cv2
 import numpy as np
+from tqdm import tqdm
 
 parse_dicts={
     # RGB value
@@ -60,13 +61,26 @@ def human_parsing(image,mask=None):
     return final_semantic
 
 
-image_path='/media/jcn/新加卷/JCN/JCN_test_datset/Train_512_semantic/126111539896225-h/2_336_0/semantic.png'
-image=cv2.imread(image_path)
-mask_path='/media/jcn/新加卷/JCN/JCN_test_datset/Train_512/126111539896225-h/2_336_0/mask.png'
-mask=cv2.imread(mask_path,flags=2)
-mask=mask/255.0
+root='/media/jcn/新加卷/JCN/JCN_test_datset/Train_512_semantic'
+root_mask='/media/jcn/新加卷/JCN/JCN_test_datset/Train_512'
+target='/media/jcn/新加卷/JCN/JCN_test_datset/semantic'
 
-final=human_parsing(image[:,:,::-1],mask[:,:,None])
-print(final.shape)
-cv2.imshow('image',final[:,:,::-1])
-cv2.waitKey(0)
+child_dirs=os.listdir(root)
+child_dirs.sort()
+pbar=tqdm(total=len(child_dirs))
+
+for model in child_dirs:
+    pbar.update(1)
+    sub_dirs=os.listdir(os.path.join(root,model))
+    sub_dirs.sort()
+    for dir in sub_dirs:
+        image=cv2.imread(os.path.join(root,model,dir,'semantic.png'))
+        mask=cv2.imread(os.path.join(root_mask,model,dir,'mask.png'),flags=2)
+        mask=mask/255.0
+        final = human_parsing(image[:, :, ::-1], mask[:, :, None])
+        # save semantic
+        target_path=os.path.join(target,model,dir)
+        if not os.path.exists(target_path):
+            os.makedirs(target_path)
+
+        cv2.imwrite(os.path.join(target_path,'semantic_mask.png'),final[:,:,::-1])
