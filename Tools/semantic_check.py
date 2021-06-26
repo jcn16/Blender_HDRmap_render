@@ -1,10 +1,10 @@
 import os
-import shutil
-from tqdm import tqdm
 
-root='/media/jcn/新加卷/JCN/JCN_test_datset/semantic'
-target='/media/jcn/新加卷/JCN/JCN_test_datset/Train_512'
+'''
+check if semantic_mask is complete
+'''
 
+root='/media/jcn/新加卷/JCN/JCN_test_datset/Train_512'
 child_dirs=os.listdir(root)
 child_dirs.sort()
 pbar=tqdm(total=len(child_dirs))
@@ -15,5 +15,7 @@ for model in child_dirs:
     sub_dirs.sort()
     for dir in sub_dirs:
         src=os.path.join(root,model,dir,'semantic_mask.png')
-        dst=os.path.join(target,model,dir,'semantic_mask.png')
-        shutil.move(src,dst)
+        if os.path.exists(src):
+            continue
+        else:
+            print(src)

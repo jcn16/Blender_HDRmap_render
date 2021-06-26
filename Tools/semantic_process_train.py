@@ -61,9 +61,9 @@ def human_parsing(image,mask=None):
     return final_semantic
 
 
-root='/media/jcn/新加卷/JCN/JCN_test_datset/TEST_512_semantic'
-root_mask='/media/jcn/新加卷/JCN/JCN_test_datset/TEST_512'
-target='/media/jcn/新加卷/JCN/JCN_test_datset/test_semantic'
+root='/media/jcn/新加卷/JCN/JCN_test_datset/Train_512_semantic'
+root_mask='/media/jcn/新加卷/JCN/JCN_test_datset/Train_512'
+target='/media/jcn/新加卷/JCN/JCN_test_datset/train_semantic'
 
 child_dirs=os.listdir(root)
 child_dirs.sort()
