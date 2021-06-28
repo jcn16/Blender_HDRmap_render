@@ -72,6 +72,26 @@ class EquirectRotate:
     # mapping LatLon coordinate into equirect coordinate system
     self.src_Pixel = LatLon2Pixel(self.src_LonLat)  # (H, W, 2)
 
+class EquirectSolidAngle:
+  """
+    @:param height: height of image to rotate
+    @:param width: widht of image to rotate
+    @:input: height, weight
+    @:output: [h,w,angle]
+  """
+
+  def __init__(self, height: int, width: int):
+    assert height * 2 == width
+    self.height = height
+    self.width = width
+
+    out_img = np.zeros((height, width))  # (H, W)
+
+    # mapping equirect coordinate into LatLon coordinate system
+    self.out_LonLat = Pixel2LatLon(out_img)  # (H, W, (lat, lon))
+  def ComputeAngle(self):
+    self.angle=ComputeSolidAngle(self.out_LonLat)
+    return self.angle
 
 def pointRotate(h, w, index, rotation):
   """
@@ -121,6 +141,12 @@ def getRotMatrix(rotation):
                  [0, np.sin(roll), np.cos(roll)]])
 
   return Rz @ Ry @ Rx
+
+def ComputeSolidAngle(image):
+  lon=np.cos(image[:,:,1])
+  lat=image[:,:,0]
+  angle=lat*(1-lon)
+  return angle
 
 def Pixel2LatLon(equirect):
   # LatLon (H, W, (lat, lon))
