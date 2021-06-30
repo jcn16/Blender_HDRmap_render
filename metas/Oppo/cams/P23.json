@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 22.63,
+    "name": "P23",
+    "position": [
+        1.063783029270426,
+        0.4982831396037401,
+        -0.7616295552451177
+    ],
+    "projection": "perspective",
+    "rotation": [
+        -8.429203673205103,
+        0,
+        24
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 22.63,
+    "name": "P27",
+    "position": [
+        0.31503827182803523,
+        -0.4766042245557506,
+        1.2781233510186787
+    ],
+    "projection": "perspective",
+    "rotation": [
+        -18.4292036732051,
+        0,
+        32
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

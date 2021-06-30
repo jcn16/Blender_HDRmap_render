@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 22.63,
+    "name": "P21",
+    "position": [
+        -0.16448345069463122,
+        0.5471251173437116,
+        1.2781233510186787
+    ],
+    "projection": "perspective",
+    "rotation": [
+        -18.4292036732051,
+        0,
+        16
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 22.63,
+    "name": "P42",
+    "position": [
+        0.0,
+        -0.6529312989014272,
+        1.4607124011642043
+    ],
+    "projection": "perspective",
+    "rotation": [
+        -18.4292036732051,
+        0,
+        0
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

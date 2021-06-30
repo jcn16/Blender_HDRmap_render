@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 22.63,
+    "name": "P53",
+    "position": [
+        -0.7402982857648303,
+        1.1199569131063907,
+        -0.8704337774229917
+    ],
+    "projection": "perspective",
+    "rotation": [
+        -8.429203673205103,
+        0,
+        32
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

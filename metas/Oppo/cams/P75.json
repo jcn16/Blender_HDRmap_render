@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 22.63,
+    "name": "P75",
+    "position": [
+        -0.21147872232166873,
+        0.7034465794419149,
+        1.64330145130973
+    ],
+    "projection": "perspective",
+    "rotation": [
+        -18.4292036732051,
+        0,
+        16
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

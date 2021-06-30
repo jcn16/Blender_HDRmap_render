@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 22.63,
+    "name": "P20",
+    "position": [
+        0.33820006659647384,
+        -1.1249627262853046,
+        -0.7616295552451177
+    ],
+    "projection": "perspective",
+    "rotation": [
+        -8.429203673205103,
+        0,
+        16
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

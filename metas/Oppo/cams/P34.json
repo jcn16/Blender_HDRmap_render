@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 22.63,
+    "name": "P34",
+    "position": [
+        0.4606453066641045,
+        1.5322551685174155,
+        0.0
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.5707963267948966,
+        0,
+        -16
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

@@ -355,6 +355,7 @@ def render_all_color(outpath, cam=None, obj_names=None, alpha=True, text=None):
     image_node = scene.node_tree.nodes.new('CompositorNodeOutputFile')
     image_node.base_path = ''
     result_image = scene.node_tree.nodes['Render Layers'].outputs['Image']
+    print(scene.node_tree.nodes['Render Layers'].outputs.keys())
     scene.node_tree.links.new(result_image, image_node.inputs['Image'])
     image_node.format.file_format = 'PNG'
     image_node.format.color_depth = '8'
@@ -380,15 +381,30 @@ def render_all_color(outpath, cam=None, obj_names=None, alpha=True, text=None):
     albedo_node.format.color_depth = '8'
     albedo_node.format.color_mode = 'RGB'
 
+    # render shadow
+    bpy.context.scene.render.layers['RenderLayer'].use_pass_diffuse_direct = True
+    bpy.context.scene.render.layers['RenderLayer'].use_pass_diffuse_indirect = True
+    shading_add = scene.node_tree.nodes.new(type="CompositorNodeMixRGB")
+    shading_add.blend_type = 'ADD'
+    scene.node_tree.links.new(scene.node_tree.nodes['Render Layers'].outputs['DiffDir'], shading_add.inputs[1])
+    scene.node_tree.links.new(scene.node_tree.nodes['Render Layers'].outputs['DiffInd'], shading_add.inputs[2])
+
+    shading_file_output = scene.node_tree.nodes.new(type="CompositorNodeOutputFile")
+    shading_file_output.label = 'Shading Output'
+    shading_file_output.base_path = ''
+    scene.node_tree.links.new(shading_add.outputs[0], shading_file_output.inputs[0])
+
     scene.render.filepath = outpath
     image_node.file_slots[0].path = scene.render.filepath + '/render_'
     albedo_node.file_slots[0].path = scene.render.filepath + '/albedo_'
     ambient_node.file_slots[0].path = scene.render.filepath + '/ambient_'
+    shading_file_output.file_slots[0].path = scene.render.filepath + '/shading_'
 
     bpy.ops.render.render(use_viewport=True,write_still=True)
 
     os.rename(os.path.join(outpath,'albedo_0001.png'),os.path.join(outpath,'albedo.png'))
     os.rename(os.path.join(outpath,'ambient_0001.png'),os.path.join(outpath,'ambient.png'))
+    os.rename(os.path.join(outpath,'shading_0001.png'),os.path.join(outpath,'shading.png'))
     os.rename(os.path.join(outpath,'render_0001.png'),os.path.join(outpath,'render.png'))
     # os.remove(os.path.join(outpath,'.png'))
 
@@ -797,6 +813,47 @@ def render_ambient(outpath, cam=None, obj_names=None, n_samples=64):
     logger.info("Select lighting passes of %s rendered through '%s' to %s",
                 obj_names, cam_name, outpath)
     logger.warning("The scene node tree has changed")
+
+def render_shading(outpath, cam=None, obj_names=None, alpha=True, text=None):
+    """Renders current scene with cameras in scene.
+
+    It is better to use .PNG, render=albedo*shading, which means all values are cliped between 0 and 1
+
+    Writes
+        - A 32-bit .exr or 16-bit .png image.
+    """
+    outdir = dirname(outpath)
+    xm_os.makedirs(outdir)
+
+    cam_name, obj_names, scene, outnode = _render_prepare(cam, obj_names)
+
+    # render shading
+    bpy.context.scene.render.layers['RenderLayer'].use_pass_diffuse_direct = True
+    bpy.context.scene.render.layers['RenderLayer'].use_pass_diffuse_indirect = True
+    shading_add = scene.node_tree.nodes.new(type="CompositorNodeMixRGB")
+    shading_add.blend_type = 'ADD'
+    scene.node_tree.links.new(scene.node_tree.nodes['Render Layers'].outputs['DiffDir'], shading_add.inputs[1])
+    scene.node_tree.links.new(scene.node_tree.nodes['Render Layers'].outputs['DiffInd'], shading_add.inputs[2])
+
+    shading_file_output = scene.node_tree.nodes.new(type="CompositorNodeOutputFile")
+    shading_file_output.label = 'Shading Output'
+    shading_file_output.base_path = ''
+    scene.node_tree.links.new(shading_add.outputs[0], shading_file_output.inputs[0])
+
+    shading_file_output.format.file_format = 'PNG'
+    shading_file_output.format.color_depth = '8'
+    shading_file_output.format.color_mode = 'RGB'
+
+    scene.render.filepath = outpath
+    shading_file_output.file_slots[0].path = scene.render.filepath + '/shading_'
+
+    bpy.ops.render.render(use_viewport=True,write_still=True)
+
+    os.rename(os.path.join(outpath,'shading_0001.png'),os.path.join(outpath,'shading.png'))
+
+    logger.info("%s rendered through '%s'", obj_names, cam_name)
+    logger.warning(
+        "Node trees and renderability of these objects have changed")
 
 def render_albedo(outpath, cam=None, obj_names=None, n_samples=64):
     """Renders albedo pass.

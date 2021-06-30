@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 22.63,
+    "name": "P65",
+    "position": [
+        1.494256206237622,
+        -0.21975288452724398,
+        -0.9792379996008657
+    ],
+    "projection": "perspective",
+    "rotation": [
+        -8.429203673205103,
+        0,
+        -8
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

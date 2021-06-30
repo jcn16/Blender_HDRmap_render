@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 22.63,
+    "name": "P61",
+    "position": [
+        0.5182259699971176,
+        1.7237870645820925,
+        0.0
+    ],
+    "projection": "perspective",
+    "rotation": [
+        1.5707963267948966,
+        0,
+        -16
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}

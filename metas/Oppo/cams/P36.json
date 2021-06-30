@@ -1,0 +1,20 @@
+{
+    "clip_end": 100,
+    "clip_start": 0.1,
+    "focal_length": 22.63,
+    "name": "P36",
+    "position": [
+        0.18798108650815,
+        0.6252858483928133,
+        1.4607124011642043
+    ],
+    "projection": "perspective",
+    "rotation": [
+        -18.4292036732051,
+        0,
+        -16
+    ],
+    "sensor_fit": "horizontal",
+    "sensor_height": 16,
+    "sensor_width": 16
+}
