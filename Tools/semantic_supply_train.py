@@ -16,4 +16,6 @@ for model in child_dirs:
     for dir in sub_dirs:
         src=os.path.join(root,model,dir,'semantic_mask.png')
         dst=os.path.join(target,model,dir,'semantic_mask.png')
+        if os.path.exists(dst):
+            continue
         shutil.copyfile(src,dst)

@@ -1,4 +1,5 @@
 import os
+from tqdm import tqdm
 
 '''
 check if semantic_mask is complete
@@ -12,6 +13,8 @@ pbar=tqdm(total=len(child_dirs))
 for model in child_dirs:
     pbar.update(1)
     sub_dirs=os.listdir(os.path.join(root,model))
+    sub_dirs.remove('prt')
+    sub_dirs.remove('GEO')
     sub_dirs.sort()
     for dir in sub_dirs:
         src=os.path.join(root,model,dir,'semantic_mask.png')
