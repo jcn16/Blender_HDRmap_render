@@ -4,7 +4,7 @@ import numpy as np
 import cv2
 from tqdm import tqdm
 
-def TransNormal(dir_path)
+def TransNormal(dir_path):
     normal=cn.io.read_files.read_exr(os.path.join(dir_path,'normal.exr'))
     R=normal[:,:,1:2]
     G=normal[:,:,0:1]
