@@ -23,7 +23,7 @@ def split_train():
 
 def gen_res():
     """
-    supply all models, num=1700-818
+    supply all models, num=1779-814
     """
     root = '/mnt/nas/TwinDom/TwinDom_PerspectRandom_Noisy'
     child_dirs = os.listdir(root)
@@ -34,6 +34,8 @@ def gen_res():
     with open('/media/jcn/新加卷/JCN/CLOTHES/Blender_rendering/metas/Oppo/models/val.json','r') as f:
         val=json.load(f)
 
+    print(len(train))
+    print(len(val))
     exist=train+val
     res=list(set(exist)^set(child_dirs))
     print(len(res))
@@ -53,6 +55,15 @@ def gen_json(path,save_path):
     with open(save_path, 'w') as f:
         f.write(dict)
 
+def gen_json_easy_res():
+    with open('/media/jcn/新加卷/JCN/CLOTHES/Blender_rendering/metas/Oppo/models/res.json', 'r') as f:
+        res = json.load(f)
+    with open('/media/jcn/新加卷/JCN/CLOTHES/Blender_rendering/metas/Oppo/models/classify/easy.json', 'r') as f:
+        easy = json.load(f)
+    choosed = list(set(res).intersection(set(easy)))
+    dict = json.dumps(choosed, ensure_ascii=False, indent=4)
+    with open('/media/jcn/新加卷/JCN/CLOTHES/Blender_rendering/metas/Oppo/models/classify/eay_res.json', 'w') as f:
+        f.write(dict)
 
 
-gen_json(path='/home/jcn/图片/Twindom_classify/hard',save_path='/home/jcn/图片/Twindom_classify/hard.json')
+gen_json_easy_res()
