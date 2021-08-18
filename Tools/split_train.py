@@ -62,7 +62,7 @@ def gen_json_easy_res():
         easy = json.load(f)
     choosed = list(set(res).intersection(set(easy)))
     dict = json.dumps(choosed, ensure_ascii=False, indent=4)
-    with open('/media/jcn/新加卷/JCN/CLOTHES/Blender_rendering/metas/Oppo/models/classify/eay_res.json', 'w') as f:
+    with open('/metas/Oppo/models/classify/easy_res.json', 'w') as f:
         f.write(dict)
 
 

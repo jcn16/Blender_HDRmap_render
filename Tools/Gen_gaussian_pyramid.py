@@ -16,8 +16,8 @@ def ComputePyramids(hdrs):
         cn.io.save_files.save_hdr(path=save_path,files=g)
 
 if __name__=='__main__':
-    root='/media/jcn/新加卷/JCN/JCN_test_datset/HDR_Heaven/HDRI_8k'
-    target='/media/jcn/新加卷/JCN/JCN_test_datset/HDR_Heaven/HDRI_8k_pyramids'
+    root='/media/jcn/新加卷/JCN/JCN_test_datset/LavalHDR/IndoorHDRDataset_hdr_tone'
+    target='/media/jcn/新加卷/JCN/JCN_test_datset/LavalHDR/IndoorHDRDataset_hdr_tone_pyramids'
     all_hdrs=glob(root+'/*.hdr')
     all_hdrs.sort()
 
