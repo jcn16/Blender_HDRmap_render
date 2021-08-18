@@ -25,7 +25,7 @@ def main():
         os.makedirs(config.get('DEFAULT', 'save_path'))
 
     # model path
-    with open(os.path.join(config.get('DEFAULT', 'model_json_path'),'train_7.json'),'r') as f:
+    with open(os.path.join(config.get('DEFAULT', 'model_json_path'),'val.json'),'r') as f:
         child_models=json.load(f)
         child_models.sort()
 
@@ -93,6 +93,7 @@ def main():
                         # print(target_path)
 
                         xm.blender.render.render_all_color(target_path)
+                        # xm.blender.render.render_unshadow(target_path)
                         normal_f = os.path.join(target_path, 'normal')
                         xm.blender.render.render_normal(normal_f)
                         alpha_f = os.path.join(target_path, 'alpha.png')

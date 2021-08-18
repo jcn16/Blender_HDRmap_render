@@ -37,18 +37,22 @@ def main():
     # loading cam and light
     with open('metas/Oppo/cams/P01.json', 'r') as h:
         cam = json.load(h)
+    with open('metas/Olat/trainvali_lights/L001.json', 'r') as h:
+        light = json.load(h)
 
     cam_obj = xm.blender.camera.add_camera(
         xyz=cam['position'], rot_vec_rad=cam['rotation'],
         name=cam['name'], f=cam['focal_length'],
         sensor_width=cam['sensor_width'], sensor_height=cam['sensor_height'],
         clip_start=cam['clip_start'], clip_end=cam['clip_end'])
-    xm.blender.light.add_light_env(env='/media/jcn/新加卷/JCN/CLOTHES/Blender_rendering/HDRmaps/round_platform_4k.hdr')
+    # xm.blender.light.add_light_env(env='/media/jcn/新加卷/JCN/CLOTHES/Blender_rendering/HDRmaps/round_platform_4k.hdr')
+    xm.blender.light.add_light_point(
+        xyz=light['position'], name=light['name'], size=light['size'])
 
     xm.blender.render.easyset(n_samples=64, color_mode='RGB')
     bpy.context.scene.use_nodes = True
 
-    xm.blender.render.render_all_color('/media/jcn/新加卷/JCN/CLOTHES/Blender_rendering/render_results')
+    xm.blender.render.render_unshadow('/media/jcn/新加卷/JCN/CLOTHES/Blender_rendering/render_results')
     #
     # rgb_camspc_f = os.path.join('render_results/rgb.png')
     # xm.blender.render.render(rgb_camspc_f)
@@ -81,7 +85,7 @@ def main():
     # xm.blender.render.render_ambient(AO_f)
     # albedo_f = os.path.join('render_results/albedo_1.png')
     # xm.blender.render.render_albedo(albedo_f)
-    xm.blender.scene.save_blend('./blend_1.blend')
+    # xm.blender.scene.save_blend('./blend_1.blend')
 
 
 if __name__ == '__main__':

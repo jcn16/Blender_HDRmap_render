@@ -25,7 +25,7 @@ def main():
         os.makedirs(config.get('DEFAULT', 'save_path'))
 
     # model path
-    with open(os.path.join(config.get('DEFAULT', 'model_json_path'),'train_7.json'),'r') as f:
+    with open(os.path.join(config.get('DEFAULT', 'model_json_path'),'train_3.json'),'r') as f:
         child_models=json.load(f)
         child_models.sort()
 

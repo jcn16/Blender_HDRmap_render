@@ -25,12 +25,8 @@ def main():
         os.makedirs(config.get('DEFAULT', 'save_path'))
 
     # model path
-    with open(os.path.join(config.get('DEFAULT', 'model_json_path'),'train_7.json'),'r') as f:
-        child_models=json.load(f)
-        child_models.sort()
-
-    # rendered model
-    rendered_models=os.listdir(config.get('DEFAULT', 'save_path'))
+    child_models=os.listdir(config.get('DEFAULT', 'save_path'))
+    child_models.sort()
 
     # HDR map path
     child_maps=glob(config.get('DEFAULT', 'light_path')+'/*.hdr')
@@ -38,8 +34,6 @@ def main():
 
     # Loading models
     for model in child_models:
-        if model in rendered_models:
-            continue
         xm.blender.render.set_cycles(w=config.getint('DEFAULT','img_size'),h=config.getint('DEFAULT','img_size'))
 
         # loading obj
