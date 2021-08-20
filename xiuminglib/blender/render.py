@@ -74,10 +74,14 @@ def set_cycles(w=None, h=None,
     # bpy.context.user_preferences.system.compute_device_type = 'CUDA'
     # bpy.context.user_preferences.system.compute_device = \
     # 'CUDA_' + str(0)
+    bpy.context.user_preferences.addons['cycles'].preferences.compute_device_type='CUDA'
+    bpy.context.user_preferences.addons['cycles'].preferences.compute_device='CUDA_0'
+    bpy.context.user_preferences.addons['cycles'].preferences.devices[1].use = False
+
     scene.cycles.device = 'GPU'
 
-    scene.render.tile_x = 16 # 256 optimal for GPU
-    scene.render.tile_y = 16 # 256 optimal for GPU
+    scene.render.tile_x = 256 # 256 optimal for GPU
+    scene.render.tile_y = 256 # 256 optimal for GPU
     if w is not None:
         scene.render.resolution_x = w
     if h is not None:
@@ -351,6 +355,8 @@ def render_all_color(outpath, cam=None, obj_names=None, alpha=True, text=None):
 
     cam_name, obj_names, scene, outnode = _render_prepare(cam, obj_names)
 
+    bpy.types.CyclesVisibilitySettings.shadow=True
+
     # render image
     image_node = scene.node_tree.nodes.new('CompositorNodeOutputFile')
     image_node.base_path = ''
@@ -407,6 +413,59 @@ def render_all_color(outpath, cam=None, obj_names=None, alpha=True, text=None):
     os.rename(os.path.join(outpath,'shading_0001.png'),os.path.join(outpath,'shading.png'))
     os.rename(os.path.join(outpath,'render_0001.png'),os.path.join(outpath,'render.png'))
     # os.remove(os.path.join(outpath,'.png'))
+
+    logger.info("%s rendered through '%s'", obj_names, cam_name)
+    logger.warning(
+        "Node trees and renderability of these objects have changed")
+
+def render_unshadow(outpath, cam=None, obj_names=None, alpha=True, text=None):
+    """Renders current scene with cameras in scene.
+
+    Args:
+        outpath (str): Path to save the render to. Should end with either
+            .exr or .png.
+        cam (bpy_types.Object, optional): Camera through which scene is
+            rendered. If ``None``, use the only camera in scene.
+        obj_names (str or list(str), optional): Name(s) of object(s) of
+            interest. If ``None``, all objects are of interest and will
+            appear in the render.
+        alpha (bool, optional): Whether to render the alpha channel.
+        text (dict, optional): What text to be overlaid on image and how,
+            following the format::
+
+                {
+                    'contents': "Hello World!",
+                    'bottom_left_corner': (50, 50),
+                    'font_scale': 1,
+                    'bgr': (255, 0, 0),
+                    'thickness': 2,
+                }
+
+    Writes
+        - A 32-bit .exr or 16-bit .png image.
+    """
+    outdir = dirname(outpath)
+    xm_os.makedirs(outdir)
+
+    cam_name, obj_names, scene, outnode = _render_prepare(cam, obj_names)
+
+    bpy.types.CyclesVisibilitySettings.shadow=False
+    # render image
+    image_node = scene.node_tree.nodes.new('CompositorNodeOutputFile')
+    image_node.base_path = ''
+    result_image = scene.node_tree.nodes['Render Layers'].outputs['Image']
+    print(scene.node_tree.nodes['Render Layers'].outputs.keys())
+    scene.node_tree.links.new(result_image, image_node.inputs['Image'])
+    image_node.format.file_format = 'PNG'
+    image_node.format.color_depth = '8'
+    image_node.format.color_mode = 'RGBA'
+
+    scene.render.filepath = outpath
+    image_node.file_slots[0].path = scene.render.filepath + '/unshadow_'
+
+    bpy.ops.render.render(use_viewport=True,write_still=True)
+
+    os.rename(os.path.join(outpath,'unshadow_0001.png'),os.path.join(outpath,'unshadow.png'))
 
     logger.info("%s rendered through '%s'", obj_names, cam_name)
     logger.warning(

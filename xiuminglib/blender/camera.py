@@ -27,6 +27,7 @@ def add_camera(xyz=(0, 0, 0),
                sensor_fit='HORIZONTAL',
                sensor_width=32,
                sensor_height=18,
+               ortho_scale=18,
                clip_start=0.1,
                clip_end=100):
     """Adds a camera to  the current scene.
@@ -66,8 +67,11 @@ def add_camera(xyz=(0, 0, 0),
     cam.data.sensor_height = sensor_height
     cam.data.clip_start = clip_start
     cam.data.clip_end = clip_end
+    if proj_model=='ORTHO':
+        cam.data.ortho_scale = ortho_scale
 
     logger.info("Camera '%s' added", cam.name)
+    logger.info("Camera '%s'", cam.data.ortho_scale)
 
     return cam
 
